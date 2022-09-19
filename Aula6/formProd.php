@@ -11,6 +11,7 @@
         session_start();
         include 'conexao.php';
         include 'nav.php';
+        $consulta = $cn->query("select * from tbl_categoria");
     ?>
 <form class="form" name="frmCadastroProd"  method="post" action="#"> 
         <label for="prod">Produto:</label>
@@ -24,8 +25,9 @@
     <label for="cat">Selecione a categoria:</label>
     <select id="cat">
         <option>Escolha a Categoria:</option>
-        <option value="1">Bebidas</option>
-        <option value="2">Papelaria</option>
+    <?php while($exibir=$consulta->fetch(PDO::FETCH_ASSOC)){?>
+        <option value="<?php  echo $exibir['cd_cad'].''; ?>"><?php  echo $exibir['categoria'].''; ?></option>
+     <?php }; ?>
     </select>
         <br><br>
         <input type="submit" name="acao" value="Enviar">
