@@ -12,7 +12,7 @@
         include 'conexao.php';
         include 'nav.php';
     ?>
-    <form class="form" name="frmCadastroCat"  method="post" action="#"> 
+    <form class="form" name="frmCadastroCat"  method="post" action="cadastroCat.php"> 
         <label for="prod">Categoria:</label>
 			<br>
             <input type="text" id="cat" name="cat" placeholder="Digite a categoria">

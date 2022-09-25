@@ -23,7 +23,7 @@ insert into tbl_produto(produto, preco, cod_cad)
 insert into tbl_categoria(categoria)
                    values('Vestimenta'),
                          ('Acessorio');
-
+                         
 create view vw_prod as
 select
 	tbl_produto.codigo,

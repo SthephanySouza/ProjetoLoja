@@ -13,7 +13,7 @@
         include 'nav.php';
         $consulta = $cn->query("select * from tbl_categoria");
     ?>
-<form class="form" name="frmCadastroProd"  method="post" action="#"> 
+<form class="form" name="frmCadastroProd" method="post" action="cadastroProd.php"> 
         <label for="prod">Produto:</label>
 			<br>
             <input type="text" id="prod" name="prod" placeholder="Digite o produto">
@@ -23,7 +23,7 @@
             <input type="text" id="preco" name="preco" placeholder="Digite o preço">
             <br><br>
     <label for="cat">Selecione a categoria:</label>
-    <select id="cat">
+    <select id="cat" name="cat">
         <option>Escolha a Categoria:</option>
     <?php while($exibir=$consulta->fetch(PDO::FETCH_ASSOC)){?>
         <option value="<?php  echo $exibir['cd_cad'].''; ?>"><?php  echo $exibir['categoria'].''; ?></option>
