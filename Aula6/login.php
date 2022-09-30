@@ -6,19 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Login</title>
+    <style>
+        body{
+            margin-top: 100px;
+        }
+
+    </style>
 </head>
 <body>
-<form class="form" name="frmLogin"  method="post" action="validaLogin.php"> 
-        <label for="login">Login:</label>
-			<br>
-            <input type="text" id="login" name="login"  placeholder="Digite seu login">
-            <br><br>
-            <label for="senha">Senha:</label>
-            <br>
-            <input type="password" id="senha" name="senha"  placeholder="Digite sua senha">
-            <br>
-            <br>
-            <input type="submit" name="cadastro" value="Entrar">
+<div class="container ">
+    <form class="form form-control-sm" name="frmLogin"  method="post" action="validaLogin.php" autocomplete="off">
+        <div class="form-group">
+            <div class="col-sm-3 offset-md-4">
+                <h2>Login do Usuário</h2>
+                <br>
+                <label for="exampleInputEmail1" class="form-label">Email</label>
+                <input name="login" type="email" id="login" class="form-control form-control-sm" required id="email">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-3 offset-md-4">
+                <label for="exampleInputPassword1" class="form-label">Senha</label>
+                <input type="password" id="senha" name="senha" class="form-control form-control-sm" id="">
+                <br>
+                <button type="submit" class="btn btn-primary">Entrar</button>
+            </div>
+        </div>
     </form>
+</div>
+
 </body>
 </html>
