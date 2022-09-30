@@ -16,13 +16,11 @@
     <?php
         session_start();
         include 'conexao.php';
+        include 'nav.php';
         $consulta = $cn->query("select * from vw_prod");
      ?>
 </head>
 <body>
-<?php
-        include 'nav.php';
-    ?>
     <table border="1">
         <tr>
             <td>Codigo</td>
