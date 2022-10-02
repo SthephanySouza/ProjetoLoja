@@ -29,6 +29,8 @@ select
 	tbl_produto.codigo,
     tbl_produto.produto,
     tbl_produto.preco,
+    tbl_produto.cod_cad,
+	tbl_categoria.cd_cad,
     tbl_categoria.categoria
 from tbl_produto inner join tbl_categoria on tbl_produto.cod_cad = tbl_categoria.cd_cad;
 
@@ -47,3 +49,5 @@ Senha bigint not null
 insert into tbl_usuario values(default, 'Felipe', 'felp@gmail.com', 123456);
 
 select * from tbl_usuario;
+
+select cd_cad, categoria from tbl_categoria where  cd_cad = 1 union select cd_cad, categoria from tbl_categoria;
