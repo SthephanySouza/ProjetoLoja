@@ -1,2 +1,0 @@
-# ProjetoLoja
-Projeto em desenvolvimento
