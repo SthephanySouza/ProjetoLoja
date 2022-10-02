@@ -31,6 +31,11 @@
                 <input type="password" id="senha" name="senha" class="form-control form-control-sm" id="">
                 <br>
                 <button type="submit" class="btn btn-primary">Entrar</button>
+                <a href ="formEmail.php">
+				<button type="button" class="btn btn-lg btn-link">
+					<h6> Esqueci minha senha</h6>
+				</button>
+			</a>
             </div>
         </div>
     </form>
