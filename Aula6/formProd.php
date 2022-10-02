@@ -14,24 +14,34 @@
         include 'nav.php';
         $consulta = $cn->query("select * from tbl_categoria");
     ?>
-<form class="form" name="frmCadastroProd" method="post" action="cadastroProd.php"> 
-        <label for="prod">Produto:</label>
-			<br>
-            <input type="text" id="prod" name="prod" placeholder="Digite o produto">
-            <br><br>
-            <label for="preco">Preço:</label>
+<div class="container ">
+    <form class="form form-control-sm" name="frmCadastroProd" method="post" action="cadastroProd.php">
+        <div class="col-sm-3 offset-md-4">
+            <h2>Cadastro de produto</h2>
             <br>
-            <input type="text" id="preco" name="preco" placeholder="Digite o preço">
-            <br><br>
-    <label for="cat">Selecione a categoria:</label>
-    <select id="cat" name="cat">
-        <option>Escolha a Categoria:</option>
-    <?php while($exibir=$consulta->fetch(PDO::FETCH_ASSOC)){?>
-        <option value="<?php  echo $exibir['cd_cad'].''; ?>"><?php  echo $exibir['categoria'].''; ?></option>
-     <?php }; ?>
-    </select>
-        <br><br>
-        <input type="submit" name="acao" value="Enviar">
+            <label for="prod" class="form-label">Produto</label>
+            <input type="text" class="form-control" id="prod" name="prod">
+        </div>
+        <br>
+        <div class="col-sm-3 offset-md-4">
+            <label for="preco" class="form-label">Preço</label>
+            <input type="text" class="form-control" id="preco" name="preco">
+        </div>
+        <br>
+        <div class="col-sm-3 offset-md-4">
+            <label for="cat" class="form-label">Selecione a categoria</label>
+            <select id="cat" name="cat" class="form-select">
+                <option disabled>Categorias:</option>
+                <?php while($exibir=$consulta->fetch(PDO::FETCH_ASSOC)){?>
+                <option value="<?php  echo $exibir['cd_cad'].''; ?>"><?php  echo $exibir['categoria'].''; ?></option>
+                <?php };?>
+            </select>
+        </div>
+        <br>
+        <div class="col-sm-3 offset-md-4">
+            <button type="submit" class="btn btn-primary">Cadastrar</button>
+        </div>
     </form>
+</div>
 </body>
 </html>

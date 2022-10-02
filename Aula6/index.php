@@ -21,7 +21,8 @@
      ?>
 </head>
 <body>
-    <table border="1">
+    <div class="table-responsive">
+    <table class="table table-bordered">
         <tr>
             <td>Codigo</td>
             <td>Produto</td>
@@ -32,15 +33,15 @@
         </tr>
         <?php while($exibir=$consulta->fetch(PDO::FETCH_ASSOC)){?>
         <tr>
-            <td><?php  echo $exibir['codigo'].''; ?></td>
-            <td><?php  echo $exibir['produto']; ?></td>
-            <td><?php  echo $exibir['preco']; ?></td>
-            <td><?php  echo $exibir['categoria']; ?></td>
-            <td><a href="#"><img src="img/alterar.png"></a></td>
-            <td><a href="#"><img src="img/excluir.png"></a></td>
+            <td><?php echo $exibir['codigo'].''; ?></td>
+            <td><?php echo $exibir['produto']; ?></td>
+            <td>R$ <?php echo number_format($exibir['preco'],2, ',','.'); ?></td>
+            <td><?php echo $exibir['categoria']; ?></td>
+            <td><a href="formAlter.php?cd=<?php echo $exibir['codigo'];?>&cat=<?php echo $exibir['cd_cad']?>"><img src="img/alterar.png"></a></td>
+            <td><a href="excluirProd.php?cd=<?php echo $exibir['codigo']; ?>"><img src="img/excluir.png"></a></td>
         </tr>
         <?php }; ?>
-        
     </table>
+    </div>
 </body>
 </html>

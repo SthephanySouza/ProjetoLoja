@@ -14,7 +14,7 @@
     </style>
 </head>
 <body>
-<div class="container ">
+<div class="container">
     <form class="form form-control-sm" name="frmLogin"  method="post" action="validaLogin.php" autocomplete="off">
         <div class="form-group">
             <div class="col-sm-3 offset-md-4">
@@ -24,6 +24,7 @@
                 <input name="login" type="email" id="login" class="form-control form-control-sm" required id="email">
             </div>
         </div>
+        <br>
         <div class="form-group">
             <div class="col-sm-3 offset-md-4">
                 <label for="exampleInputPassword1" class="form-label">Senha</label>

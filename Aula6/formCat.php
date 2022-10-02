@@ -13,12 +13,19 @@
         include 'conexao.php';
         include 'nav.php';
     ?>
-    <form class="form" name="frmCadastroCat"  method="post" action="cadastroCat.php"> 
-        <label for="prod">Categoria:</label>
-			<br>
-            <input type="text" id="cat" name="cat" placeholder="Digite a categoria">
-            <br><br>
-        <input type="submit" name="acao" value="Enviar">
+<div class="container ">
+    <form class="form form-control-sm" name="frmCadastroCat"  method="post" action="cadastroCat.php">
+        <div class="col-sm-3 offset-md-4">
+            <h2>Cadastro de categoria</h2>
+            <br>
+            <label for="prod" class="form-label">Categoria</label>
+            <input type="text" class="form-control" id="cat" name="cat">
+        </div>
+        <br>
+        <div class="col-sm-3 offset-md-4">
+            <button type="submit" class="btn btn-primary">Cadastrar</button>
+        </div>
     </form>
+</div>
 </body>
 </html>
