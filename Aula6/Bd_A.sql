@@ -43,10 +43,11 @@ create table tbl_usuario(
 Codigo bigint primary key auto_increment,
 Nome varchar(200) not null,
 Login varchar(200) not null,
-Senha bigint not null
+Senha bigint not null,
+Acesso boolean default (0)
 );
 
-insert into tbl_usuario values(default, 'Felipe', 'felp@gmail.com', 123456);
+insert into tbl_usuario values(default, 'Felipe', 'felp@gmail.com', 123456, 1);
 
 select * from tbl_usuario;
 

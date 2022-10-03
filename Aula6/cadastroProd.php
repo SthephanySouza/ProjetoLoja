@@ -12,7 +12,7 @@
         insert into tbl_produto(produto, preco, cod_cad)
                      values('$vProd', '$vPrec', '$vCat');
         ");
-        header('location:index.php');
+        header('location:menuAdmis.php');
     }
     else{
         header('location:erro1.php');

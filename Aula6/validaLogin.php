@@ -6,12 +6,20 @@
     $vLogin = $_POST['login'];
     $vSenha = $_POST['senha'];
 
-    $consulta = $cn->query("select Codigo, Nome, Login, Senha from tbl_usuario where Login = '$vLogin' and Senha = '$vSenha'");
+    $consulta = $cn->query("select Codigo, Nome, Login, Senha, Acesso from tbl_usuario where Login = '$vLogin' and Senha = '$vSenha'");
 
     if($consulta->rowCount() == 1){
         $exibeUsuario = $consulta->fetch(PDO::FETCH_ASSOC);
-        $_SESSION['ID'] = $exibeUsuario['Codigo'];
-        header('location:index.php');
+        if($exibeUsuario['Acesso'] == 0){
+            $_SESSION['ID'] = $exibeUsuario['Codigo'];
+            $_SESSION['Status'] = 0;
+            header('location:index.php');
+        }
+        else{
+            $_SESSION['ID'] = $exibeUsuario['Codigo'];
+            $_SESSION['Status'] = 1;
+            header('location:index.php');
+        }
     }
     else{
         header('location:erro.php');

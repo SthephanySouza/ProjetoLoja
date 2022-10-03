@@ -8,7 +8,7 @@
 
     if($consulta->rowCount() == 0){
         $inserir = $cn->query("insert into tbl_categoria(categoria) values('$vCat');");
-        header('location:index.php');
+        header('location:menuAdmis.php');
     }
     else{
         header('location:erro1.php');
