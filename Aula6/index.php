@@ -12,7 +12,23 @@
     session_start();
     include 'conexao.php';
     include 'nav.php';
+    include 'jumb.php';
+    $consulta = $cn->query("select * from vw_prod");
 ?>
 
+<div class="container-fluid">
+        <div class="row">
+        <?php while($exibir=$consulta->fetch(PDO::FETCH_ASSOC)){?>
+            <div class="col-sm-3">
+                <div><h5><b>Produto: <?php echo $exibir['produto']; ?></b></h5></div>
+                <div><h5>Preço: R$ <?php echo number_format($exibir['preco'],2, ',','.'); ?></h5></div>
+                <div class="text" style="margin-top:5px; margin-bottom:5px;">
+                <a class="btn btn-xl btn-block btn-success" href="formComprar.php" role="button">Comprar</a>
+
+                </div>
+            </div>
+        <?php } ?>
+        </div>
+    </div>
 </body>
 </html>
