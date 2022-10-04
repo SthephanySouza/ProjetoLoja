@@ -12,11 +12,6 @@ function validacampos(evt){
         document.getElementById("login").focus();
         return false;
     }
-    else if($login.value != /\S+@\S+\.\S+/){
-        alert("Obrigatório o uso do @");
-        document.getElementById("login").value = "";
-        document.getElementById("login").focus();
-    }
     else if($senha == ""){
         alert("Obrigatório coloca sua senha.");
         document.getElementById("senha").focus();
@@ -32,5 +27,4 @@ function validacampos(evt){
         document.frmLogin.action = "validaLogin.php";
         document.frmLogin.submit();
     }
-
 }
