@@ -15,7 +15,7 @@
 </head>
 <body>
 <div class="container">
-    <form class="form form-control-sm" name="frmLogin"  method="post" action="validaLogin.php" autocomplete="off">
+    <form id="form" class="form form-control-sm" name="frmLogin"  method="post" autocomplete="off">
         <div class="form-group">
             <div class="col-sm-3 offset-md-4">
                 <h2>Login do Usuário</h2>
@@ -30,7 +30,7 @@
                 <label for="exampleInputPassword1" class="form-label">Senha</label>
                 <input type="password" id="senha" name="senha" class="form-control form-control-sm" id="">
                 <br>
-                <button type="submit" class="btn btn-primary">Entrar</button>
+                <button id="entrar" class="btn btn-primary">Entrar</button>
                 <a href ="formLogin.php">
 				<button type="button" class="btn btn-lg btn-link">
 					<h6>Criar conta</h6>
@@ -40,6 +40,6 @@
         </div>
     </form>
 </div>
-
+<script src="script.js"></script>
 </body>
 </html>
