@@ -21,14 +21,14 @@
                 <h2>Login do Usuário</h2>
                 <br>
                 <label for="exampleInputEmail1" class="form-label">Email</label>
-                <input name="login" type="email" id="login" class="form-control form-control-sm" required id="email">
+                <input name="login" type="email" id="login" class="form-control form-control-sm">
             </div>
         </div>
         <br>
         <div class="form-group">
             <div class="col-sm-3 offset-md-4">
                 <label for="exampleInputPassword1" class="form-label">Senha</label>
-                <input type="password" id="senha" name="senha" class="form-control form-control-sm" id="">
+                <input type="password" id="senha" name="senha" class="form-control form-control-sm">
                 <br>
                 <button id="entrar" class="btn btn-primary">Entrar</button>
                 <a href ="formLogin.php">

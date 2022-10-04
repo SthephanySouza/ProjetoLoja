@@ -14,30 +14,31 @@
 </head>
 <body>
 <div class="container">
-    <form class="form form-control-sm" name="frmRecup"  method="post" action="cadastroUsu.php" autocomplete="off">
+    <form class="form form-control-sm" name="frmCadUsu" method="post" autocomplete="off">
         <div class="form-group">
             <div class="col-sm-3 offset-md-4">
                 <h2>Criar uma Conta</h2>
                 <br>
                 <label for="nome" class="form-label">Nome</label>
-                <input name="nome" type="text" id="nome" class="form-control form-control-sm" required id="nome">
+                <input name="nome" type="text" id="nome" class="form-control form-control-sm">
             </div>
         </div>
         <br>
         <div class="form-group">
             <div class="col-sm-3 offset-md-4">
                 <label for="email" class="form-label">Email</label>
-                <input name="email" type="email" id="email" class="form-control form-control-sm" required id="email">
+                <input name="email" type="email" id="email" class="form-control form-control-sm">
             </div>
         </div>
         <br>
         <div class="col-sm-3 offset-md-4">
                 <label for="exampleInputPassword1" class="form-label">Senha</label>
-                <input type="password" id="senha" name="senha" class="form-control form-control-sm" id="">
+                <input type="password" id="senha" name="senha" class="form-control form-control-sm">
                 <br>
-                <button type="submit" class="btn btn-primary">Cadastrar</button>
+                <button id="entrar" class="btn btn-primary">Cadastrar</button>
             </div>
     </form>
 </div>
+<script src="scriptCad.js"></script>
 </body>
 </html>

@@ -1,8 +1,7 @@
-let $botao = document.getElementById("entrar")
+let $botao = document.getElementById("entrar");
+$botao.addEventListener("click",validalogin);
 
-$botao.addEventListener("click",validacampos);
-
-function validacampos(evt){
+function validalogin(evt){
     evt.preventDefault();
     let $login = document.getElementById("login").value;
     let $senha = document.getElementById("senha").value;
