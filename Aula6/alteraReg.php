@@ -12,5 +12,5 @@
     cod_cad = '$vCat'
     where codigo = '$cd_prod';
     ");
-    header('location:index.php');
+    header('location:exibeRig.php');
 ?>

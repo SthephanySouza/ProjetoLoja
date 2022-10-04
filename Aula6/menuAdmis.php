@@ -21,6 +21,7 @@
             <a class="btn btn-primary" href="exibeRig.php" role="button">Exibe registro</a>
             <a class="btn btn-danger" href="formProd.php" role="button">Cadastro de produto</a>
             <a class="btn btn-warning" href="formCat.php" role="button">Cadastro de categoria</a>
+            <a class="btn btn-info" href="exibeUsu.php" role="button">Lista de usuários</a>
         </div>
     </form>
 </div>
