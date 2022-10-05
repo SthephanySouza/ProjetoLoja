@@ -40,6 +40,6 @@
         </div>
     </form>
 </div>
-<script src="script.js"></script>
+<script src="scriptLog.js"></script>
 </body>
 </html>
