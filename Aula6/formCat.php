@@ -14,7 +14,7 @@
         include 'nav.php';
     ?>
 <div class="container ">
-    <form class="form form-control-sm" name="frmCadastroCat"  method="post" action="cadastroCat.php">
+    <form class="form form-control-sm" name="frmCadastroCat"  method="post">
         <div class="col-sm-3 offset-md-4">
             <h2>Cadastro de categoria</h2>
             <br>
@@ -23,9 +23,10 @@
         </div>
         <br>
         <div class="col-sm-3 offset-md-4">
-            <button type="submit" class="btn btn-primary">Cadastrar</button>
+            <button id="entrar" class="btn btn-primary">Cadastrar</button>
         </div>
     </form>
 </div>
+<script src="scriptCat.js"></script>
 </body>
 </html>
