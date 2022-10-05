@@ -27,12 +27,12 @@
             <h2>Alteração de produto</h2>
             <br>
             <label for="prod" class="form-label">Produto</label>
-            <input type="text" value="<?php echo $exibirProd['produto'] ?>" class="form-control" id="txtrod" name="txtprod">
+            <input type="text" value="<?php echo $exibirProd['produto']; ?>" class="form-control" id="txtrod" name="txtprod">
         </div>
         <br>
         <div class="col-sm-3 offset-md-4">
             <label for="preco" class="form-label">Preço</label>
-            <input type="text" value="<?php echo $exibirProd['preco'] ?>" class="form-control" id="txtpreco" name="txtpreco">
+            <input type="text" value="<?php echo $exibirProd['preco']; ?>" class="form-control" id="txtpreco" name="txtpreco">
         </div>
         <br>
         <div class="col-sm-3 offset-md-4">

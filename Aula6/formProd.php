@@ -15,12 +15,12 @@
         $consulta = $cn->query("select * from tbl_categoria");
     ?>
 <div class="container ">
-    <form class="form form-control-sm" name="frmCadastroProd" method="post" action="cadastroProd.php">
+    <form class="form form-control-sm" name="frmCadastroProd" method="post">
         <div class="col-sm-3 offset-md-4">
             <h2>Cadastro de produto</h2>
             <br>
             <label for="prod" class="form-label">Produto</label>
-            <input type="text" class="form-control" id="prod" name="prod">
+            <input type="text" class="form-control" id="prod" name="prod" pattern="([aA-zZ]+)">
         </div>
         <br>
         <div class="col-sm-3 offset-md-4">
@@ -39,9 +39,10 @@
         </div>
         <br>
         <div class="col-sm-3 offset-md-4">
-            <button type="submit" class="btn btn-primary">Cadastrar</button>
+            <button id="entrar" class="btn btn-primary">Cadastrar</button>
         </div>
     </form>
 </div>
+<script src="scriptProd.js"></script>
 </body>
 </html>
